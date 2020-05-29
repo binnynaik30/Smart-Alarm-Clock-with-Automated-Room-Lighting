@@ -1,0 +1,42 @@
+#tpick {
+            margin: 0 auto;
+            max-width: 350px;
+            padding: 10px;
+            background: black;
+            white-space: nowrap;
+            font-family: Arial;
+            }
+            
+            #tpick select {
+              box-sizing: padding-box;
+              width: 100%;
+              font-size: 1.2em;
+              font-weight: bold;
+              margin: 20px 0;
+            }
+            
+            #tset, #treset, #onlight, #offlight {
+              box-sizing: padding-box;
+              width: 50%;
+              background: red;
+              color: #fff;
+              padding: 10px;
+              border: 0;
+              cursor: pointer;
+            }
+            
+            #tset:disabled, #treset:disabled, #onlight:disabled, #offlight:disabled{
+              background: #aaa;
+              color: #888;
+            }
+            
+           .text {
+              margin-top: 10px;
+              color: #ddd;
+           }
+           
+           .square {
+              display: inline-block;
+              padding: 10px;
+              margin: 5px;
+           }

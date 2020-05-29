@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bolt IoT Platform</title>
+        <script type="text/javascript" src="https://cloud.boltiot.com/static/js/boltCommands.js"></script>
+		<link rel="stylesheet" type="text/css" href="css.css">
+		<script type="text/javascript" src="js.js"></script>
+        <script>setKey('{{ApiKey}}','{{Name}}');</script>
+    </head>    
+    
+    <body>
+     <div id="tpick">
+      <h1 class="header" style="color:pink"><center>SET ALARM</center></h1>
+      
+      <center>
+     
+      <div class="square">
+        <input type="number" id="hour" name="hour" min="0" max="23" step="1" value="00">
+        <div class="text">Hr</div>
+     </div>
+     
+     <div class="square">
+        <input type="number" id="min" name="min" min="0" max="59" step="1" value="00">
+        <div class="text">Min</div>
+     </div>
+     
+     <div class="square">
+        <input type="number" id="sec" name="sec" min="0" max="59" step="1" value="00">
+        <div class="text">Sec</div>
+     </div>
+   
+     </center>
+     
+     <br>
+     
+     <div>
+        <input type="button" value="START ALARM" id="tset" onclick="get_confirm();this.disabled=true;treset.disabled=false;myVar = setInterval(timer,1000)"/>
+        <input type="button" value="STOP ALARM" id="treset" onclick="clearInterval(myVar);this.disabled=true;tset.disabled=false;offlight.disabled=false;analogWrite('0','0');digitalWrite('1','HIGH');alert('Your alarm is stopped and rooms lights are turned on')" disabled/>
+        <br><br><input type="button" value="ON LIGHTS" id="onlight" onclick="digitalWrite('1','HIGH');this.disabled=true;offlight.disabled=false;alert('Your rooms lights are turned on')" disabled/>
+        <input type="button" value="OFF LIGHTS" id="offlight" onclick="digitalWrite('1','LOW');this.disabled=true;onlight.disabled=false;alert('Your rooms lights are turned off')" disabled/>
+    </div>
+    </div>
+
+    </body>
+</html>
